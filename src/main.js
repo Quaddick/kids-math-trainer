@@ -1,3 +1,7 @@
-// Точка входа приложения. Полноценная сборка разделов — в Task 17.
-const app = document.querySelector('#app');
-app.textContent = 'Загрузка…';
+import { createApp } from './router.js';
+import './style.css';
+
+// Точка входа: монтируем приложение в #app.
+const root = document.querySelector('#app');
+root.innerHTML = '';
+root.appendChild(createApp());

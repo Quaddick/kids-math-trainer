@@ -1,0 +1,8 @@
+/* Базовые стили — расширяются в Task 18 (frontend-design). */
+:root {
+  --place-hundred: #7c4dff; /* сотни — фиолетовый */
+  --place-ten: #00bcd4;     /* десятки — бирюзовый */
+  --place-one: #ff9800;     /* единицы — оранжевый */
+}
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 0; }
