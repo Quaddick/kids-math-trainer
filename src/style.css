@@ -131,6 +131,19 @@ body {
   transform: scale(0.97);
 }
 
+/* Видимый фокус для клавиатурной навигации (WCAG 2.4.7) */
+.keypad__key:focus-visible,
+.show-btn:focus-visible,
+.levels__btn:focus-visible,
+.examples__btn:focus-visible,
+.tabs__tab:focus-visible,
+.slot:focus-visible,
+.mag-chips__chip:focus-visible,
+.operand:focus-visible {
+  outline: 3px solid var(--place-ten);
+  outline-offset: 2px;
+}
+
 /* ===================================================================
    ВКЛАДКИ НАВИГАЦИИ
    =================================================================== */

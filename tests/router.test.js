@@ -16,4 +16,14 @@ describe('createApp', () => {
     expect(app.querySelector('.view--magnitudes')).not.toBeNull();
     expect(app.querySelector('.view--addition')).toBeNull();
   });
+  it('клик по вкладке Величины переключает класс is-active', () => {
+    const app = createApp();
+    const tabMag = app.querySelector('.tabs__tab[data-view="magnitudes"]');
+    const tabAdd = app.querySelector('.tabs__tab[data-view="addition"]');
+    tabMag.click();
+    // Вкладка «Величины» должна стать активной
+    expect(tabMag.classList.contains('is-active')).toBe(true);
+    // Вкладка «Сложение» должна потерять активность
+    expect(tabAdd.classList.contains('is-active')).toBe(false);
+  });
 });

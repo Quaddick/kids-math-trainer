@@ -1,5 +1,8 @@
 import { computeDecomposition } from '../core/addition.js';
 
+// Цвета намеренно назначаются по структурной роли: сотни (--place-hundred) и остаток <100 (--place-ten) —
+// а не по полному разбору единиц/десятков/сотен, поэтому оранжевый цвет единиц здесь не используется (так решено).
+
 // Вспомогательная функция: создаёт span с классами decomp__num и модификатором разряда.
 function numSpan(cls, value) {
   const span = document.createElement('span');
