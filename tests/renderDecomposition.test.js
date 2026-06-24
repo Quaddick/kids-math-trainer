@@ -19,4 +19,16 @@ describe('renderDecomposition', () => {
     renderDecomposition(container, 370, 50);
     expect(container.querySelectorAll('.decomp__row').length).toBeGreaterThanOrEqual(3);
   });
+  it('370 + 50: часть сотен 300 обёрнута в span .decomp__num--hundred', () => {
+    renderDecomposition(container, 370, 50);
+    const hundreds = container.querySelectorAll('.decomp__num--hundred');
+    const values = Array.from(hundreds).map(el => el.textContent);
+    expect(values).toContain('300');
+  });
+  it('370 + 50: остаток 70 обёрнут в span .decomp__num--rest', () => {
+    renderDecomposition(container, 370, 50);
+    const rests = container.querySelectorAll('.decomp__num--rest');
+    const values = Array.from(rests).map(el => el.textContent);
+    expect(values).toContain('70');
+  });
 });
